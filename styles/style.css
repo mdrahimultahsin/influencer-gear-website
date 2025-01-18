@@ -1,33 +1,348 @@
 /* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-
+.inter-normal {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-normal {
+  font-family: "Poppins", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /* ======================================
     Shared Styles
 ========================================= */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: #3a3a3a;
 }
 
-
+/* CSS Variables */
+:root {
+  --primary-color: #e02c6d;
+  --star-color: #fb8200;
+}
+div img {
+  max-width: 100%;
+  height: auto;
+}
+nav,
+main,
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section {
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+.flex {
+  display: flex;
+}
+.btn-primary {
+  padding: 10px 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 24px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primary i {
+  color: white;
+}
 /* ======================================
     Header Section Styles
 ========================================= */
+header {
+  padding: 50px 0;
+  align-items: center;
+}
+nav {
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.menu-bar {
+  align-items: center;
+}
+.menu-bar li {
+  list-style: none;
+  margin-right: 30px;
+}
+.menu-bar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.1s ease-in-out;
+}
+.menu-bar li a:hover {
+  color: var(--primary-color);
+}
+.menu-bar li:first-child a {
+  color: var(--primary-color);
+}
+nav .nav-icons {
+  gap: 20px;
+  align-items: center;
+}
+nav .nav-icons i {
+  font-size: 1.3rem;
+}
+#responsive-icon {
+  display: none;
+}
+#hero-banner {
+  margin-top: 50px;
+  align-items: center;
+  gap: 100px;
+}
+.banner-content {
+  max-width: 580px;
+  flex-direction: column;
+  gap: 15px;
+}
+.banner-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.banner-description {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.banner-img {
+  background: url(../images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex: 1;
+}
+/* ======================================
+    Sponsor Section Styles
+========================================= */
+#sponsor {
+  border-top: 1px solid #c0ccda;
+  border-bottom: 1px solid #c0ccda;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+/* ======================================
+    Popular Collection Section Styles
+========================================= */
+#collection .section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.card-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.card-container .card {
+  border-radius: 5px;
+  padding: 20px 15px;
+  background: white;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+}
+.card .product-name {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.card .product-price {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.card .stars i {
+  color: var(--star-color);
+  font-size: 1rem;
+}
+#half-star {
+  margin-right: 10px;
+}
+.card .stars > span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card .product-description {
+  margin-top: 10px;
+  width: 190px;
+  font-size: 0.9rem;
+  line-height: 143%;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+#see-more-btn {
+  margin-top: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+#see-more-btn > i {
+  color: var(--primary-color);
+}
 
 /* ======================================
-    Header Section Styles
+    Feature Section Styles
 ========================================= */
+#feature {
+  gap: 100px;
+}
+.feature-img {
+  height: 270px;
+}
+.feature-img img {
+  height: 100%;
+}
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  max-width: 610px;
+}
+.feature-content .feature-title {
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+.feature-content .feature-description {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 28px;
+}
+.feature-content .feature-btn > button {
+  padding: 15px 25px;
+  border-radius: 0;
+}
+
 /* ======================================
-    Header Section Styles
+    Footer Section Styles
 ========================================= */
-
-
+footer {
+  width: 100%;
+  padding: 50px 0;
+  background: rgb(10, 8, 38);
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+footer > .logo {
+    color: white;
+}
+footer > .footer-description {
+    color: white;
+}
+.footer-social {
+    margin-top: 10px;
+    gap: 20px;
+}
+.footer-social i {
+    border-radius: 50%;
+    background: rgba(255, 255, 255,.1);
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+}
 /* ======================================
     Responsive Styles
 ========================================= */
 
 /* For Mobile Screen */
-
-
+@media screen and (max-width: 576px) {
+  .menu-bar {
+    display: none;
+  }
+  #responsive-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #hero-banner,#feature {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+  .feature-content {
+    margin: 0 auto;
+  }
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  .banner-description,.feature-description {
+    font-size: 0.9rem;
+  }
+  #sponsor {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .feature-title {
+    font-size: 1.5rem;
+  }
+}
 /* For Tablet Screen */
+@media screen and (min-width: 577px) and (max-width: 990px) {
+  .nav-icons {
+    display: none;
+  }
+  #hero-banner,#feature {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  #sponsor {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card:last-child {
+    grid-column: span 2;
+  }
+  #see-more-btn {
+    text-align: center;
+  }
+  .feature-content {
+    max-width: 100% !important;
+  }
+  .feature-img {
+    width: 100% !important;
+    height: auto;
+  }
+}
